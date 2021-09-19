@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% if title %}
+    <title>{{ title }} - microblog</title>
+    {% else %}
+    <title>microblog</title>
+    {% endif %}
+</head>
+<body>
+    <div>
+         <p>
+             <a href='/index'>Home</a>
+         </p>
+
+<!--         <p>-->
+<!--             <a href='/prediction'>Play with ML model</a>-->
+<!--         </p>-->
+    </div>
+    <hr>
+    {% block content %}
+
+    {% endblock %}
+</body>
+</html>

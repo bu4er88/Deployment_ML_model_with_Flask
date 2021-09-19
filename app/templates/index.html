@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h1>Hi! Let's check would you survive on Titanic or not?</h1>
+    <h2>Please, set required parameters:</h2>
+
+    <form action="{{ url_for('prediction') }}" method="post">
+        <label for="age">Insert your age:</label>
+        <br>
+        <input type="number" name="age">
+        <br><br>
+        <label for="gender">Choose your gender:</label>
+        <br>
+        <input type="text" name="gender">
+        <br><br><br><br>
+        <input type="submit">
+    </form>
+    <br>
+    <br>
+
+    {{ predict_message }}
+
+{% endblock %}
